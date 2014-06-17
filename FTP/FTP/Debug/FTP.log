@@ -1,0 +1,34 @@
+﻿Build started 17/6/2014 3:42:31 PM.
+     1>Project "C:\Users\Hlaine\documents\visual studio 2013\Projects\FTP\FTP\FTP.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\FTP.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FTP.cpp
+         FTP.cpp
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(62): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(63): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(64): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(65): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(66): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(67): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(93): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(119): warning C4101: 'wsadata' : unreferenced local variable
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(126): warning C4101: 'conName' : unreferenced local variable
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(125): warning C4101: 'conIP' : unreferenced local variable
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(141): warning C4101: 'temp' : unreferenced local variable
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(118): warning C4101: 'dataSock' : unreferenced local variable
+     1>c:\users\hlaine\documents\visual studio 2013\projects\ftp\ftp\ftp.cpp(120): warning C4101: 'dataAddr' : unreferenced local variable
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Hlaine\documents\visual studio 2013\Projects\FTP\Debug\FTP.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Hlaine\documents\visual studio 2013\Projects\FTP\Debug\FTP.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Hlaine\documents\visual studio 2013\Projects\FTP\Debug\FTP.lib" /MACHINE:X86 Debug\FTP.obj
+         Debug\stdafx.obj
+         FTP.vcxproj -> C:\Users\Hlaine\documents\visual studio 2013\Projects\FTP\Debug\FTP.exe
+     1>Done Building Project "C:\Users\Hlaine\documents\visual studio 2013\Projects\FTP\FTP\FTP.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.46
