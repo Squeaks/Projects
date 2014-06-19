@@ -1,0 +1,16 @@
+﻿Build started 11/6/2014 9:57:11 PM.
+     1>Project "C:\Users\Hlaine\documents\visual studio 2013\Projects\BandwidthMonitor\BandwidthMonitor\BandwidthMonitor.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Hlaine\Documents\Visual Studio 2013\Projects\BandwidthMonitor\BandwidthMonitor\WpdPack\Include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\BandwidthMonitor.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BandwidthMonitor.cpp
+         BandwidthMonitor.cpp
+     1>c:\users\hlaine\documents\visual studio 2013\projects\bandwidthmonitor\bandwidthmonitor\bandwidthmonitor.cpp(23): warning C4101: 'fp' : unreferenced local variable
+     1>c:\users\hlaine\documents\visual studio 2013\projects\bandwidthmonitor\bandwidthmonitor\bandwidthmonitor.cpp(74): warning C4101: 'ip6str' : unreferenced local variable
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Hlaine\documents\visual studio 2013\Projects\BandwidthMonitor\Debug\BandwidthMonitor.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Hlaine\Documents\Visual Studio 2013\Projects\BandwidthMonitor\BandwidthMonitor\WpdPack\Lib" wpcap.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Hlaine\documents\visual studio 2013\Projects\BandwidthMonitor\Debug\BandwidthMonitor.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Hlaine\documents\visual studio 2013\Projects\BandwidthMonitor\Debug\BandwidthMonitor.lib" /MACHINE:X86 Debug\BandwidthMonitor.obj
+         Debug\stdafx.obj
+         BandwidthMonitor.vcxproj -> C:\Users\Hlaine\documents\visual studio 2013\Projects\BandwidthMonitor\Debug\BandwidthMonitor.exe
+     1>Done Building Project "C:\Users\Hlaine\documents\visual studio 2013\Projects\BandwidthMonitor\BandwidthMonitor\BandwidthMonitor.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.88
