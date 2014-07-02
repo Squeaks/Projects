@@ -1,10 +1,8 @@
-﻿Build started 18/6/2014 7:34:45 PM.
+﻿Build started 21/6/2014 8:46:26 PM.
      1>Project "B:\Github\Projects\FTP\FTP\FTP.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\FTP.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt FTP.cpp
          FTP.cpp
-     1>b:\github\projects\ftp\ftp\ftp.cpp(107): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
      1>b:\github\projects\ftp\ftp\ftp.cpp(108): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
      1>b:\github\projects\ftp\ftp\ftp.cpp(109): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
@@ -15,16 +13,38 @@
                  d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
      1>b:\github\projects\ftp\ftp\ftp.cpp(112): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
-     1>b:\github\projects\ftp\ftp\ftp.cpp(139): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>b:\github\projects\ftp\ftp\ftp.cpp(113): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
-     1>b:\github\projects\ftp\ftp\ftp.cpp(146): warning C4800: 'char *' : forcing value to bool 'true' or 'false' (performance warning)
-     1>b:\github\projects\ftp\ftp\ftp.cpp(147): warning C4800: 'char *' : forcing value to bool 'true' or 'false' (performance warning)
-     1>b:\github\projects\ftp\ftp\ftp.cpp(180): warning C4101: 'wsadata' : unreferenced local variable
-     1>b:\github\projects\ftp\ftp\ftp.cpp(187): warning C4101: 'conName' : unreferenced local variable
-     1>b:\github\projects\ftp\ftp\ftp.cpp(186): warning C4101: 'conIP' : unreferenced local variable
-     1>b:\github\projects\ftp\ftp\ftp.cpp(202): warning C4101: 'temp' : unreferenced local variable
-     1>b:\github\projects\ftp\ftp\ftp.cpp(179): warning C4101: 'dataSock' : unreferenced local variable
-     1>b:\github\projects\ftp\ftp\ftp.cpp(181): warning C4101: 'dataAddr' : unreferenced local variable
+     1>b:\github\projects\ftp\ftp\ftp.cpp(139): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(141): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(142): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(164): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(165): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(118) : see declaration of 'strcat'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(166): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(118) : see declaration of 'strcat'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(178): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(179): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(118) : see declaration of 'strcat'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(181): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(183): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(196): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(204) : see declaration of 'strtok'
+     1>b:\github\projects\ftp\ftp\ftp.cpp(203): warning C4800: 'char *' : forcing value to bool 'true' or 'false' (performance warning)
+     1>b:\github\projects\ftp\ftp\ftp.cpp(204): warning C4800: 'char *' : forcing value to bool 'true' or 'false' (performance warning)
+     1>b:\github\projects\ftp\ftp\ftp.cpp(240): warning C4101: 'wsadata' : unreferenced local variable
+     1>b:\github\projects\ftp\ftp\ftp.cpp(247): warning C4101: 'conName' : unreferenced local variable
+     1>b:\github\projects\ftp\ftp\ftp.cpp(246): warning C4101: 'conIP' : unreferenced local variable
+     1>b:\github\projects\ftp\ftp\ftp.cpp(262): warning C4101: 'temp' : unreferenced local variable
+     1>b:\github\projects\ftp\ftp\ftp.cpp(239): warning C4101: 'dataSock' : unreferenced local variable
+     1>b:\github\projects\ftp\ftp\ftp.cpp(241): warning C4101: 'dataAddr' : unreferenced local variable
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"B:\Github\Projects\FTP\Debug\FTP.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"B:\Github\Projects\FTP\Debug\FTP.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"B:\Github\Projects\FTP\Debug\FTP.lib" /MACHINE:X86 Debug\FTP.obj
          Debug\stdafx.obj
@@ -33,4 +53,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.46
+Time Elapsed 00:00:00.48

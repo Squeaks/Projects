@@ -7,14 +7,15 @@
 
 #include <stdlib.h>
 #include <windows.h>
-
-
+#include <stdio.h>
+//#include <unistd.h>
+#include <direct.h>
 
 #pragma comment(lib,"ws2_32.lib")
 
 #define BUFSIZE 512
 
-SOCKET pasv(SOCKET, char*);
+SOCKET pasv(SOCKET);
 void listCmd(SOCKET, SOCKET, char*);
 
 void login(int rec, SOCKET conSock, char* buf){
@@ -34,7 +35,7 @@ void login(int rec, SOCKET conSock, char* buf){
 	printf("%.*s\n", rec, buf);
 	rec = recv(conSock, buf, 512 * 8, 0);
 	printf("%.*s\n", rec, buf);
-
+	Sleep(1000);
 
 	send(conSock, pass, (strlen(pass)), 0);
 	printf("Sent PASS\n");
@@ -61,7 +62,7 @@ void login(int rec, SOCKET conSock, char* buf){
 	rec = recv(conSock, buf, 512 * 8, 0);
 	printf("%.*s\n", rec, buf);
 
-	dataSock = pasv(conSock, buf);
+	dataSock = pasv(conSock);
 
 	listCmd(conSock, dataSock, buf);
 
@@ -86,7 +87,7 @@ void listCmd(SOCKET conSock, SOCKET dataSock, char* buf){
 
 }
 
-SOCKET pasv(SOCKET conSock, char* buf){
+SOCKET pasv(SOCKET conSock){
 	struct sockaddr_in dataAddr;
 	SOCKET dataSock;
 	char* pasv = "PASV\r\n";
@@ -95,9 +96,9 @@ SOCKET pasv(SOCKET conSock, char* buf){
 
 	send(conSock, pasv, (strlen(pasv)), 0);
 	printf("Sent PASV\n");
-	rec = recv(conSock, recvBuf, 512 * 8, 0);
+	rec = recv(conSock, recvBuf, sizeof(char) * BUFSIZE, 0);
 	while (rec == -1){
-		rec = recv(conSock, recvBuf, 512 * 8, 0);
+		rec = recv(conSock, recvBuf, sizeof(char)* BUFSIZE, 0);
 	}
 	//rec = recv(conSock, recvBuf, 512 * 8, 0);
 	printf("%.*s\n", rec, recvBuf);
@@ -133,6 +134,62 @@ SOCKET pasv(SOCKET conSock, char* buf){
 	return dataSock;
 }
 
+void retr(SOCKET conSock, char* input){
+	char* cmd = (char*)malloc(sizeof(char) * strlen(input));
+	strcpy(cmd, input);
+	
+	strtok(input, " ");
+	char* fileName = strtok(NULL, " ");
+	int size = atoi(fileName);
+	int rec = 0;
+	char* file = (char*)malloc(sizeof(char)* size);
+	char* buf = (char*)malloc(sizeof(char)* BUFSIZE);
+	char bin[] = "TYPE I\r\n";
+
+	char* cwd;
+
+	
+	char* buffer;
+
+	// Get the current working directory: 
+	if ((buffer = _getcwd(NULL, 0)) == NULL)
+		perror("_getcwd error");
+	else
+	{
+		printf("%s \nLength: %d\n", buffer, strlen(buffer));
+		//free(buffer);
+	}
+
+	cwd = (char*)malloc((strlen(buffer) + 1 + strlen(fileName)) * sizeof(char));
+	strcpy(cwd, buffer);
+	strcat(cwd, "\\");
+	strcat(cwd, fileName);
+	FILE* fp;
+
+
+	SOCKET dataSock;
+	
+	dataSock = pasv(conSock);
+	/*
+	send(conSock, "TYPE I\r\n", sizeof(bin), 0);
+	rec = recv(conSock, buf, sizeof(char)* BUFSIZE, 0);
+	printf("%.*s", rec, buf);
+	*/
+	strtok(cwd, "\r\n\315");
+	strcat(cwd, "\\");
+	printf(cwd);
+	fp = fopen(cwd, "w+");
+	perror("fp");
+	strtok(cmd, "\315");
+	send(conSock, cmd, strlen(cmd), 0);
+	rec = recv(dataSock, buf, sizeof(char)* BUFSIZE, 0);
+	fprintf(fp, "%.*s",rec, buf);
+	fclose(fp);
+	Sleep(1000);
+	closesocket(dataSock);
+	printf("Wrote %s", cwd);
+}
+
 void inputCmd(char* input, int rec, SOCKET conSock, char* buf){
 	char* buff = (char*)malloc(sizeof(char)* BUFSIZE);
 	fgets(input, 256, stdin);
@@ -147,7 +204,7 @@ void inputCmd(char* input, int rec, SOCKET conSock, char* buf){
 	bool li2 = strstr(input, "LIST");
 	if ( li != NULL ||  li2 != NULL){
 		SOCKET dataSock;
-		dataSock = pasv(conSock, buff);
+		dataSock = pasv(conSock);
 		listCmd(conSock, dataSock, buff);
 		closesocket(dataSock);
 	}
@@ -160,6 +217,9 @@ void inputCmd(char* input, int rec, SOCKET conSock, char* buf){
 		closesocket(conSock);
 		Sleep(1000);
 		exit(0);
+	}
+	else if (strstr(input, "retr") != NULL){
+		retr(conSock, input);
 	}
 	else {
 		rec = send(conSock, input, rec + 2, 0);
